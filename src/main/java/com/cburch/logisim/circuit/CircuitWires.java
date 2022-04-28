@@ -437,10 +437,7 @@ class CircuitWires {
         } else {
           g.setColor(Color.BLACK);
         }
-        int temp_r = g.getColor().getRed();
-        int temp_g = g.getColor().getGreen();
-        int temp_b = g.getColor().getBlue();
-        g.setColor(new Color(temp_r, temp_g, temp_b,128));
+        g.setColor(new Color(g.getColor().getRed(), g.getColor().getGreen(), g.getColor().getBlue(),128));
         if (highlighted.containsWire(wire)) {
           width = wb.isBus() ? Wire.HIGHLIGHTED_WIDTH_BUS : Wire.HIGHLIGHTED_WIDTH;
           GraphicsUtil.switchToWidth(g, width);
